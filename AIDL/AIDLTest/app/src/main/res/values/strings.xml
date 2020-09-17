@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AIDLTest</string>
+    <string name="button_local_ui">Local UI</string>
+    <string name="button_local_worker">Local Worker</string>
+    <string name="button_remote_ui">Remote UI</string>
+    <string name="button_remote_worker">Remote Worker</string>
+
+</resources>

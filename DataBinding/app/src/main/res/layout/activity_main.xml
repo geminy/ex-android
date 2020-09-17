@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="user" type="com.example.databinding.User"/>
+        <variable name="handlers" type="com.example.databinding.MyHandlers"/>
+        <variable name="presenter" type="com.example.databinding.Presenter" />
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="changeUser">
+        <!--android:text="@{user.firstName, default=xxx} ?"-->
+        <!--android:onClick="@{() -> presenter.onSaveClick(user)}"-->
+        <!--android:onClick="@{() -> presenter.onSaveClick(user.firstName)}"-->
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.firstName}"
+            android:onClick="@{(view) -> presenter.onSaveClick(view, user)}"/>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.lastName}"
+            android:onClick="@{handlers::handleOnClick}"/>
+        <com.example.databinding.MyTextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:myText="@{user.lastName}"
+            app:onMyClick="printText"/>
+    </LinearLayout>
+</layout>

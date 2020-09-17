@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_local_ui"
+        android:layout_x="10dp"
+        android:layout_y="10dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="onButton4LocalUIClicked"
+        android:text="@string/button_local_ui" />
+
+    <Button
+        android:id="@+id/button_local_worker"
+        android:layout_x="110dp"
+        android:layout_y="10dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="onButton4LocalWorkerClicked"
+        android:text="@string/button_local_worker" />
+
+    <Button
+        android:id="@+id/button_remote_ui"
+        android:layout_x="210dp"
+        android:layout_y="10dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="onButton4RemoteUIClicked"
+        android:text="@string/button_remote_ui" />
+
+    <Button
+        android:id="@+id/button_remote_worker"
+        android:layout_x="310dp"
+        android:layout_y="10dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="onButton4RemoteWorkerClicked"
+        android:text="@string/button_remote_worker" />
+
+</AbsoluteLayout>

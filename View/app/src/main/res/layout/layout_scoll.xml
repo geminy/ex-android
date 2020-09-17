@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.view.ScrollLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark">
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:background="@drawable/fruit" />
+
+</com.example.view.ScrollLayout>
