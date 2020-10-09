@@ -22,6 +22,8 @@ import android.view.MotionEvent;
 import android.view.SearchEvent;
 import android.view.View;
 
+import com.example.testsystemui.cts.LightBarActivity;
+
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -144,8 +146,10 @@ public class MainActivity extends Activity {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        super.onTouchEvent(event);
         MyLog.output(TAG_CLASS_NAME, "onTouchEvent", "");
-        return super.onTouchEvent(event);
+        startActivity(new Intent(this, LightBarActivity.class));
+        return true;
     }
 
     @Override
