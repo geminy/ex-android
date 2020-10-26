@@ -1,29 +1,48 @@
 package com.example.testsystemui.cts;
 
 import android.app.Activity;
-import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+
+import com.example.testsystemui.R;
 
 public class LightBarActivity extends Activity {
     private static LightBarActivity sInstance;
 
-    private View mContent;
+    private LinearLayout mContent;
 
     public static LightBarActivity getInstance() {
         return sInstance;
     }
 
+    public View getContent() {
+        return mContent;
+    }
+
     @Override
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        mContent = new View(this);
-        mContent.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,
-                LayoutParams.MATCH_PARENT));
-        setContentView(mContent);
+        mContent = new LinearLayout(this);
+        mContent.setOrientation(LinearLayout.HORIZONTAL);
+        mContent.setGravity(Gravity.LEFT);
+        mContent.setBackgroundColor(Color.RED);
+        for (int i = 0; i < 10; ++i) {
+            ImageView image = new ImageView(this);
+            image.setBackgroundResource(R.drawable.ic_save);
+            mContent.addView(image, 100, 100);
+        }
+        LayoutParams lp = new LayoutParams(LayoutParams.MATCH_PARENT,
+                100);
+        setContentView(mContent, lp);
 
         sInstance = this;
+
         mContent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
